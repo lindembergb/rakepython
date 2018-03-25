@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*- 
 import rake
 import operator
 import sys
@@ -11,7 +9,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-  return 'It wórks!'
+  return 'It works!'
 
 @app.route('/rake')
 @app.route("/rake/<text>".decode('utf-8'))
