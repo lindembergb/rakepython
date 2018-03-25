@@ -8,7 +8,11 @@ rake_object = rake.Rake("stopwords_pt.txt", 4, 3, 0)
 app = Flask(__name__)
 
 @app.route('/')
-@app.route("/<text>".decode('utf-8'))
+def hello_world():
+  return 'Hello, World!'
+
+@app.route('/rake')
+@app.route("/rake/<text>".decode('utf-8'))
 def home(text=""):
 	text = text.decode('base64')
 	keywords = rake_object.run(text)
