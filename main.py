@@ -16,6 +16,7 @@ def hello_world():
 @app.route('/rake')
 @app.route("/rake/<text>".decode('utf-8'))
 def home(text=""):
+	text = text.decode('utf-8')
 	keywords = rake_object.run(text)
 	kw = []
 	for name in keywords:
