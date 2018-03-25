@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-  return 'It works!'
+  return 'It wórks!'
 
 @app.route('/rake')
 @app.route("/rake/<text>".decode('utf-8'))
